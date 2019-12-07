@@ -4,6 +4,7 @@ def find_item_by_name_in_collection(name, collection)
   new_hash = {}
   i = 0
   while i < collection.length do 
+<<<<<<< HEAD
     collection[i]
     if collection[i][:item] == name
       return collection[i]
@@ -11,6 +12,17 @@ def find_item_by_name_in_collection(name, collection)
     i += 1
   end 
   #nil is implicitly applied
+=======
+    in_my_cart = collection[i][:item]
+  if !name = in_my_cart
+    return
+  else name = in_my_cart
+    new_hash[:item] = in_my_cart
+  end
+  i += 1
+  end 
+  return new_hash
+>>>>>>> 1f9ac1ca3adab94eb2233d6ba05f194019af61bf
 end
 
 def consolidate_cart(cart)
